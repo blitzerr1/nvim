@@ -14,6 +14,8 @@ set copyindent      " copy indent from the previous line
 " enable mouse support
 set mouse=a
 
+set pastetoggle=<F2>
+
 " Replace esc with jj
 imap jj <Esc>
 
@@ -81,3 +83,12 @@ let g:netrw_browse_split = 4
 
 " Make the file browser only cover 25% of the screen.
 let g:netrw_winsize = 20
+
+" Vim code folding
+" fold everything with zM and unfold everything with zR. zm and zr can be used
+" to get those folds just right. Always remember the almighty help file at
+" “help :folding” if you get stuck
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
