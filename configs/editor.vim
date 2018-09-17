@@ -7,16 +7,15 @@ colorscheme solarized8
 nnoremap <leader>i mzgg=G`z<CR>
 
 " spaces and tabs
-set tabstop=2       " number of visual spaces per TAB
-set softtabstop=2   " number of spaces in tab when editing
-set shiftwidth=2    " number of spaces to use for autoindent
 set expandtab       " tabs are space
 set autoindent
 set copyindent      " copy indent from the previous line
-set textwidth=79    " wraparound at 79 chars
 
 " enable mouse support
 set mouse=a
+
+" Replace esc with jj
+imap jj <Esc>
 
 " UI Config {{{
 set hidden
@@ -28,7 +27,7 @@ set showmatch                " highlight matching brace
 set laststatus=2             " window will always have a status line
 set nobackup
 set noswapfile
-let &colorcolumn="79,".join(range(119,999),",")
+let &colorcolumn="79,".join(range(101,999),",")
 " }}} UI Config
 
 " Folding {{{

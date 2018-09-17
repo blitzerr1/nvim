@@ -7,6 +7,10 @@ function! Workspace()
         let numcol = 3
     endif
 
+  set tabstop=2       " number of visual spaces per TAB
+  set softtabstop=2   " number of spaces in tab when editing
+  set shiftwidth=2    " number of spaces to use for autoindent
+  set textwidth=79    " wraparound at 79 chars
 
     " if numcol == 3
     "     file ACC
@@ -19,9 +23,10 @@ command! -register Padb call Workspace()
 
 function! RustSpace()
     " Rough num columns to decide between laptop and big monitor screens
-    cd /Users/joydeep/rust-dev/rust
-    set tabstop=2
-    set shiftwidth=2
+    cd $HOME/rust-dev/rust
+    set tabstop=4
+    set shiftwidth=4
+    set softtabstop=4   " number of spaces in tab when editing
     set expandtab
 endfunction
 command! -register Rust call RustSpace()

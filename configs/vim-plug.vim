@@ -68,5 +68,10 @@ Plug 'nvie/vim-flake8'
 " Rust syntax detector
 Plug 'rust-lang/rust.vim'
 
+
+Plug 'mhinz/vim-grepper'
+" Ctags plugin
+"Plug 'universal-ctags/ctags'
+
 " Initialize plugin system
 call plug#end()
