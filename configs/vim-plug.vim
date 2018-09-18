@@ -70,6 +70,10 @@ Plug 'rust-lang/rust.vim'
 
 
 Plug 'mhinz/vim-grepper'
+
+" Git integrations for vim
+Plug 'tpope/vim-fugitive'
+
 " Ctags plugin
 "Plug 'universal-ctags/ctags'
 

@@ -28,5 +28,6 @@ function! RustSpace()
     set shiftwidth=4
     set softtabstop=4   " number of spaces in tab when editing
     set expandtab
+    e src/librustc_mir/borrow_check/error_reporting.rs
 endfunction
 command! -register Rust call RustSpace()
