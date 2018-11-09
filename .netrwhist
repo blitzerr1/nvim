@@ -1,10 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Users/joydeep/rust-dev/rust'
-let g:netrw_dirhist_2='/Users/joydeep/rust-dev/rust/src/libsyntax'
-let g:netrw_dirhist_3='/Users/joydeep/rust-dev'
-let g:netrw_dirhist_4='/Users/joydeep/rust-dev/rust/src/librustc'
-let g:netrw_dirhist_5='/Users/joydeep/rust-dev/rust/src'
-let g:netrw_dirhist_6='/Users/joydeep/rust-dev/rust'
-let g:netrw_dirhist_7='/Users/joydeep/rust-dev/rust/src/bootstrap'
-let g:netrw_dirhist_8='/Users/joydeep/my-rust-setup'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/joydees/Documents/PADB/src/monitoring'
+let g:netrw_dirhist_2='/Users/joydees/Documents'
+let g:netrw_dirhist_3='/Users/joydees'

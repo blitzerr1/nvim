@@ -46,6 +46,9 @@ else
 endif
 let g:deoplete#enable_at_startup = 1
 
+" Git integrations for vim
+Plug 'tpope/vim-fugitive'
+
 " solarized theme
 Plug 'lifepillar/vim-solarized8'
 
@@ -70,9 +73,6 @@ Plug 'rust-lang/rust.vim'
 
 
 Plug 'mhinz/vim-grepper'
-
-" Git integrations for vim
-Plug 'tpope/vim-fugitive'
 
 " Ctags plugin
 "Plug 'universal-ctags/ctags'
