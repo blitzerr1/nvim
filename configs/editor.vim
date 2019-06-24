@@ -1,6 +1,7 @@
 set background=dark
 " colorscheme solarized8
 colorscheme one
+let g:one_allow_italics = 1  " enable italics
 
 " syntax enable
 
@@ -12,6 +13,7 @@ set expandtab       " tabs are space
 set autoindent
 set copyindent      " copy indent from the previous line
 
+set shiftwidth=4
 " enable mouse support
 set mouse=a
 
@@ -94,4 +96,19 @@ set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
 set termguicolors
-let g:one_allow_italics = 1  " enable italics
+
+" Disable the arrow keys. To learn vim navigations the hard way
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+" Using tab and shift tab for drop-down selection
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Enabling rust language server support
+let g:neosnippet#enable_complete_done = 1
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/ra_lsp_server'],
+    \ }

@@ -46,6 +46,9 @@ else
 endif
 let g:deoplete#enable_at_startup = 1
 
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+
 " Git integrations for vim
 Plug 'tpope/vim-fugitive'
 
@@ -63,7 +66,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 
 " To show vertical indentation
-Plug 'Yggdroot/indentLine'
+" Plug 'Yggdroot/indentLine'
 
 " Flake8 integration
 Plug 'nvie/vim-flake8'
@@ -79,6 +82,9 @@ Plug 'tpope/vim-fugitive'
 
 " for the one theme
 Plug 'rakr/vim-one'
+
+" go for vim
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Ctags plugin
 "Plug 'universal-ctags/ctags'
