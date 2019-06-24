@@ -60,6 +60,8 @@ let mapleader=","
 
 " trailing whitespace
 match ErrorMsg '\s\+$'
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
 
 " open a new buffer below
 set splitbelow
@@ -103,9 +105,24 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+" in insert mode use <ctrl + relevant key> to navigate in directions
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+cnoremap <C-h> <Left>
+cnoremap <C-j> <Down>
+cnoremap <C-k> <Up>
+cnoremap <C-l> <Right>
+
 " Using tab and shift tab for drop-down selection
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" bracket matching
+inoremap { {<CR>}<Esc>ko<Tab>
+inoremap ( ()<Esc>i
+inoremap < <><Esc>i
 
 " Enabling rust language server support
 let g:neosnippet#enable_complete_done = 1
