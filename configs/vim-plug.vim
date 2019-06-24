@@ -86,6 +86,8 @@ Plug 'rakr/vim-one'
 " go for vim
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+" coc intellisense for vim
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Ctags plugin
 "Plug 'universal-ctags/ctags'
 

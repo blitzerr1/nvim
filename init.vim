@@ -7,4 +7,3 @@ source $HOME/.config/nvim/configs/workspace.vim
 source $HOME/.config/nvim/configs/terminal.vim
 source $HOME/.config/nvim/configs/cpp-colors.vim
 source $HOME/.config/nvim/configs/grepper.vim
-

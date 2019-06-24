@@ -115,10 +115,6 @@ cnoremap <C-j> <Down>
 cnoremap <C-k> <Up>
 cnoremap <C-l> <Right>
 
-" Using tab and shift tab for drop-down selection
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
 " bracket matching
 inoremap { {<CR>}<Esc>ko<Tab>
 inoremap ( ()<Esc>i
@@ -126,6 +122,11 @@ inoremap < <><Esc>i
 
 " Enabling rust language server support
 let g:neosnippet#enable_complete_done = 1
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/ra_lsp_server'],
-    \ }
+let g:coc_global_config="$HOME/.config/nvim/configs/coc-settings.json"
+
+" Using tab and shift tab for drop-down selection
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Use <cr> to confirm completion
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
