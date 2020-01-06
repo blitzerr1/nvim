@@ -91,5 +91,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Ctags plugin
 "Plug 'universal-ctags/ctags'
 
+Plug 'zivyangll/git-blame.vim'
+
 " Initialize plugin system
 call plug#end()

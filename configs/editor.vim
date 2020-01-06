@@ -5,15 +5,15 @@ let g:one_allow_italics = 1  " enable italics
 
 " syntax enable
 
-" fix indentation
-nnoremap <leader>i mzgg=G`z<CR>
+" fix indentation nnoremap <leader>i mzgg=G`z<CR>
 
 " spaces and tabs
 set expandtab       " tabs are space
 set autoindent
 set copyindent      " copy indent from the previous line
-
+set tabstop=4
 set shiftwidth=4
+set textwidth=80
 " enable mouse support
 set mouse=a
 
@@ -116,13 +116,14 @@ cnoremap <C-k> <Up>
 cnoremap <C-l> <Right>
 
 " bracket matching
-inoremap { {<CR>}<Esc>ko<Tab>
+inoremap { {<CR>}<Esc>ko
 inoremap ( ()<Esc>i
-inoremap < <><Esc>i
+inoremap " ""<Esc>i
+"inoremap < <><Esc>i
 
 " Enabling rust language server support
 let g:neosnippet#enable_complete_done = 1
-let g:coc_global_config="$HOME/.config/nvim/configs/coc-settings.json"
+" let g:coc_global_config="$HOME/.config/nvim/configs/coc-settings.json"
 
 " Using tab and shift tab for drop-down selection
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -130,3 +131,8 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Use <cr> to confirm completion
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
+
+" remove trailing whitespaces on save
+autocmd BufWritePre * :%s/\s\+$//e
